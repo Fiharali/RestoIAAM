@@ -187,16 +187,238 @@ h1.menuTitle {
 /* strat forth section  */
 
 .forth-section {
+  padding-top: 10px;
   background-image: url("images/backround2.png");
   background-attachment: fixed;
-  height: 70vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: fit-content;
 }
 .forth-section h1 {
   width: fit-content;
-  margin:10px auto 0 auto;
+  padding: 15px;
+  margin: 10px auto;
 
   color: var(--textColor);
   font-weight: normal;
   font-style: italic;
 }
+
+.forth-section .row div.col-lg-4 {
+  height: 400px;
+  width: 400px;
+  background-color: var(--textColor);
+  position: relative;
+}
+
+.forth-section .row div.col-lg-4 i {
+  font-size: 80px;
+  position: absolute;
+  left: 17%;
+  top: 15%;
+  color: var(--mainColor);
+}
+.forth-section .row div.col-lg-4 h1 {
+  font-size: 25px;
+  color: var(--secondColor);
+  position: absolute;
+  left: 50%;
+  top: 11%;
+  font-style: normal;
+}
+.forth-section .row div.col-lg-4 h1::before {
+  content: " ";
+  width: 2px;
+  height: 70px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  position: absolute;
+  left: -17%;
+}
+.forth-section .row div.col-lg-4 p {
+  /* font-size: 25px; */
+  color: var(--secondColor);
+  opacity: 0.8;
+  position: absolute;
+  left: 15%;
+  top: 45%;
+  font-style: normal;
+}
+.forth-section .row div.col-lg-4 span {
+  font-size: 22px;
+  color: var(--mainColor);
+  text-decoration: underline;
+  position: absolute;
+  left: 15%;
+  bottom: 10%;
+  font-style: normal;
+}
+@media (max-width: 401px) {
+  .forth-section .row div.col-lg-4 {
+    height: 300px;
+    width: 300px;
+  }
+  .forth-section .row div.col-lg-4 h1::before {
+    left: -1%;
+  }
+}
 /* end forth section  */
+/* start five section  */
+.five-section i {
+  color: var(--mainColor);
+  font-size: xx-large;
+  padding: 20px;
+  cursor: pointer;
+}
+.five-section i:hover {
+  transform: scale(1.5);
+  transition: all 0.3s linear;
+}
+
+.five-section .cards div {
+  /* background-color: #ff0000; */
+  position: relative;
+  height: 150px;
+  min-width: 650px;
+}
+
+.five-section .cards div img {
+  position: absolute;
+  top: 15%;
+  left: 10%;
+}
+.five-section .cards div h1 {
+  position: absolute;
+  top: 10%;
+  left: 30%;
+  font-size: xx-large;
+  font-style: italic;
+}
+.five-section .cards div p {
+  position: absolute;
+  top: 40%;
+  left: 30%;
+}
+.five-section .cards div span {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  font-size: 26px;
+  color: var(--mainColor);
+}
+
+@media (max-width: 800px) {
+  .five-section .cards div {
+    max-width: 300px;
+    min-width: 300px;
+    /* background-color: #0000ff; */
+    margin: 5px;
+  }
+
+  .five-section .cards div img {
+    top: 20%;
+    left: 0%;
+    width: 30%;
+    margin-right: 10px;
+  }
+  .five-section .cards div h1 {
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    font-size: x-large;
+    font-style: italic;
+  }
+  .five-section .cards div p {
+    top: 40%;
+    left: 30%;
+    font-size: small;
+  }
+  .five-section .cards div span {
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    font-size: 18px;
+    color: var(--mainColor);
+  }
+}
+/* end five section  */
+/* start sixth section  */
+.sixth-section {
+  height: fit-content;
+  width: 100%;
+  background-color: var(--secondColor);
+}
+
+
+.sixth-section .row .col-lg-2 {
+  text-align: center;
+}
+
+.sixth-section .row .col-lg-2 span {
+  font-size: 60px;
+  font-weight: bolder;
+  color: var(--mainColor);
+}
+.sixth-section .row .col-lg-2 p {
+  font-size: x-large;
+  font-weight: bolder;
+  color: var(--mainColor);
+}
+/* end sixth section  */
+/* start seven section  */
+.seven-section .row div {
+  background-color: #fff;
+  text-align: center;
+  position: relative;
+  min-height: 230px;
+  margin-top: 80px;
+  /* width: 48%; */
+  
+}
+.seven-section h1{
+  margin: auto;
+
+}
+.seven-section img{
+background-color: #ff0000;
+}
+@media (min-width: 770px) {
+  .seven-section .row div {
+    width: 48%;
+  }
+  }
+
+.seven-section .row div img {
+  position: absolute;
+  top: -25%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.seven-section .row div p {
+  position: absolute;
+  top: 24%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.seven-section .row div span {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: bolder;
+  font-style: italic;
+}
+
+@media (min-width: 760px) and (max-width: 1000px) {
+  .seven-section .row div {
+    min-height: 330px;
+  }
+}
+
+@media (max-width: 450px) {
+  .seven-section .row div {
+    min-height: 330px;
+    margin-top: 100px;
+  }
+}
+/* end seven section  */
