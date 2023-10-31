@@ -24,8 +24,33 @@ body {
   background-size: cover;
 }
 ul li .nav-link {
-  color: aliceblue;
+  color: var(--textColor);
   font-size: large;
+  position: relative;
+}
+
+ul li .nav-link.hoverAfter::after {
+  content: " ";
+  position: absolute;
+  height: 2px;
+  width: 70%;
+  bottom: 10%;
+  left: 14%;
+  background-color: var(--mainColor);
+  transform: scaleX(0);
+  transition: all 0.2s linear;
+}
+ul li .nav-link.hoverAfter:hover::after {
+  transform: scaleX(1);
+}
+
+ul li .nav-link i {
+  color: var(--mainColor);
+  font-size: large;
+}
+ul li .nav-link i:hover {
+  transform: scale(1.2);
+  transition: all .2s linear;
 }
 
 ul li .nav-link:hover {
@@ -90,9 +115,6 @@ ul li .nav-link.loginBtn:hover {
 }
 .second-section h1 {
   font-size: 20px;
-}
-.second-section .row div.col-lg-4 {
-  min-width: 420px;
 }
 
 @media (max-width: 420px) {
@@ -218,6 +240,11 @@ h1.menuTitle {
   top: 15%;
   color: var(--mainColor);
 }
+
+.forth-section .row div.col-lg-4:hover i {
+  transform: rotateY(200deg);
+  transition: all 0.4s linear;
+}
 .forth-section .row div.col-lg-4 h1 {
   font-size: 25px;
   color: var(--secondColor);
@@ -269,9 +296,10 @@ h1.menuTitle {
   font-size: xx-large;
   padding: 20px;
   cursor: pointer;
+  transform: scale(2);
 }
 .five-section i:hover {
-  transform: scale(1.5);
+  transform: scale(1.8);
   transition: all 0.3s linear;
 }
 
@@ -341,6 +369,11 @@ h1.menuTitle {
     color: var(--mainColor);
   }
 }
+
+.five-section .cards div:hover span {
+  text-decoration: underline;
+  transition: all 0.4s linear;
+}
 /* end five section  */
 /* start sixth section  */
 .sixth-section {
@@ -349,9 +382,14 @@ h1.menuTitle {
   background-color: var(--secondColor);
 }
 
-
 .sixth-section .row .col-lg-2 {
   text-align: center;
+}
+.sixth-section .row .col-lg-2:hover span {
+  color: var(--textColor);
+}
+.sixth-section .row .col-lg-2:hover p {
+  color: var(--textColor);
 }
 
 .sixth-section .row .col-lg-2 span {
@@ -373,20 +411,31 @@ h1.menuTitle {
   min-height: 230px;
   margin-top: 80px;
   /* width: 48%; */
-  
 }
-.seven-section h1{
-  margin: auto;
+.seven-section .row div:hover span {
+  color: var(--mainColor);
+}
 
+.seven-section h1 {
+  margin: auto;
+  width: fit-content;
 }
-.seven-section img{
-background-color: #ff0000;
+.seven-section .sin {
+  position: relative;
+  margin-top: 160px;
 }
+.seven-section .sin img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 @media (min-width: 770px) {
   .seven-section .row div {
     width: 48%;
   }
-  }
+}
 
 .seven-section .row div img {
   position: absolute;
@@ -422,3 +471,87 @@ background-color: #ff0000;
   }
 }
 /* end seven section  */
+/* start last section  */
+.last-section {
+  margin-top: 200px;
+  background-color: var(--mainColor);
+  padding: 20px 100px;
+}
+.last-section img {
+  width: 80%;
+}
+/* end last section  */
+/* start footer   */
+footer {
+  height: fit-content;
+  background-color: var(--secondColor);
+}
+footer ul {
+  list-style: none;
+  color: var(--textColor);
+}
+footer ul li {
+  color: var(--textColor);
+  padding: 20px;
+  font-size: large;
+  font-style: italic;
+}
+
+footer ul:not(.first-list) li:not(:first-child) {
+  opacity: 0.6;
+}
+footer ul:not(.first-list) li:not(:first-child):hover {
+  text-decoration: underline;
+}
+
+footer ul li i {
+  color: var(--mainColor);
+}
+
+footer ul li:first-child {
+  font-size: xx-large;
+  font-weight: bold;
+  font-style: italic;
+}
+footer ul li:first-child:hover {
+  color: var(--mainColor);
+}
+footer ul.first-list li:not(:first-child) {
+  font-size: large;
+  font-style: italic;
+  font-weight: lighter;
+}
+footer ul.first-list li i {
+  font-size: xx-large;
+}
+footer ul.first-list li form input[type="email"] {
+  width: 140px;
+  background-color: var(--mainColor);
+  border: none;
+  outline: none;
+  height: 40px;
+  /* font-size: 10px; */
+}
+footer ul.first-list li form input[type="email"]::placeholder {
+  color: #fff;
+  font-size: small;
+}
+footer ul.first-list li form input[type="email"]:focus {
+  border: none;
+  outline: none;
+}
+
+footer ul.first-list li form input[type="submit"] {
+  background-color: var(--secondColor);
+  border: solid 2px var(--mainColor);
+  outline: none;
+  padding: 5px 6px;
+  color: var(--mainColor);
+}
+
+/* end footer   */
+h1:hover {
+  color: var(--mainColor);
+  opacity: 0.8;
+  transition: all 0.2s linear;
+}
