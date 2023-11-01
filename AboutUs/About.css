@@ -1,69 +1,119 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: "Roboto Condensed", sans-serif;
+    color: var(--secondColor);
 }
 
-.navbar {
-    background-color: #1b1b1c;
-    display: flex;
-    justify-content: space-between;
-
-
+:root {
+    --mainColor: #fe7f32;
+    --secondColor: #222222;
+    --textColor: #eeeeee;
 }
 
-nav ul li {
-    display: flex;
-    justify-content: center;
+body {
+    background-color: var(--textColor);
 }
 
-
-
-.navitems {
-    display: flex;
-    align-items: center;
+.navbar-brand img {
+    width: 90px;
+}
+.container-fluid.first-section{
+    z-index: 793468;
+}
+.first-section {
+    background-color: #222222;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
 }
 
-.navitems li {
-    margin: 20px;
+ul li .nav-link {
+    color: var(--textColor);
+    font-size: large;
+    position: relative;
 }
 
-.vectoricon {
-    cursor: pointer;
+ul li .nav-link.hoverAfter::after {
+    content: " ";
+    position: absolute;
+    height: 2px;
+    width: 70%;
+    bottom: 10%;
+    left: 14%;
+    background-color: var(--mainColor);
+    transform: scaleX(0);
+    transition: all 0.2s linear;
 }
 
-.navbutton {
+ul li .nav-link.hoverAfter:hover::after {
+    transform: scaleX(1);
+}
+
+ul li .nav-link i {
+    color: var(--mainColor);
+    font-size: large;
+}
+
+ul li .nav-link i:hover {
+    transform: scale(1.2);
+    transition: all 0.2s linear;
+}
+
+ul li .nav-link:hover {
+    color: var(--mainColor);
+}
+
+ul li .nav-link.loginBtn {
+    background-color: var(--mainColor);
+    padding: 8px 30px;
     border-radius: 10px;
-    background: #FE7F32;
-    width: 101px;
-    height: 39px;
 }
 
-.nav-item a {
-    color: white;
+ul li .nav-link.loginBtn:hover {
+    background-color: #ffffff00;
+    /* padding: 8px 14px; */
 }
 
-.navbar a {
-    color: white;
-    text-decoration: none;
+.collapse {
+    display: flex;
+    justify-content: end;
 }
 
-.dropdown-menu a {
-    color: black;
+@media (max-width: 990px) {
+    .collapse {
+        display: flex;
+        justify-content: start;
+    }
 }
 
-.nav-item a:hover {
-    color: #FE7F32;
-    text-transform: uppercase;
+.navbar-expand-lg {
+    background-color: #0004ff00;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    transition: all 0.4s linear;
+    left: 0;
+    top: 0;
+    right: 0;
 }
 
-.navbar a:hover {
-    color: #FE7F32;
-    text-transform: uppercase;
+.navbar-expand-lg-transparent-remove {
+    background-color: var(--textColor);
 }
 
-.navitems input {
-    display: none;
+.navbar-expand-lg-transparent-remove ul li .nav-link {
+    color: var(--secondColor);
 }
+
+.navbar-expand-lg-transparent-remove ul li .nav-link:hover {
+    color: var(--mainColor);
+}
+
+/* end first section  */
 
 .image-container {
     position: relative;
@@ -137,12 +187,16 @@ nav ul li {
     align-items: center;
     justify-content: center;
     text-align: center;
+    margin-top: 140px;
 }
 
+.card img:hover{
+    transform: rotate(360deg);
+    transition:transform 1s;
+}
 
 .imagecards {
-    width: 12rem;
-    height: 248px;
+    width: 14rem;
     margin: 1.5rem;
     border-radius: 10px;
     background-color: black;
@@ -183,26 +237,130 @@ nav ul li {
     line-height: normal;
 }
 
-.insideimage-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    text-align: center;
+
+
+.imagecards:hover {
+    transform: scale(1.1);
+    transition: 1s;
 }
 
-.PersonSocialMedia img {
-    width: 2.5rem;
-    height: 2.5rem;
-    
-}
 .ourteam-about{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    margin-top: 50px;
 }
 
-.imagecards:hover{
-    transform: scale(1.1);
-    z-index: 100;
-    transition: 1s;
-   
+
+.name-job-clickicon{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
+.name-job-clickicon img{
+    width: 35px;
+    height: 35px;
+}
+.PersonSocialMedia .socialmediaicons{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    position:absolute;
+    top: 96px;
+    right: 19px;
+    z-index: 1100;
+}
+ .PersonSocialMedia .socialmediaicons img{
+    width: 25px;
+    height: 25px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* start footer   */
+footer {
+    height: fit-content;
+    background-color: var(--secondColor);
+    margin: 60px;
+}
+
+footer ul {
+    list-style: none;
+    color: var(--textColor);
+}
+
+footer ul li {
+    color: var(--textColor);
+    padding: 20px;
+    font-size: large;
+    font-style: italic;
+}
+
+footer ul:not(.first-list) li:not(:first-child) {
+    opacity: 0.6;
+}
+
+footer ul:not(.first-list) li:not(:first-child):hover {
+    text-decoration: underline;
+}
+
+footer ul li i {
+    color: var(--mainColor);
+}
+
+footer ul li:first-child {
+    font-size: xx-large;
+    font-weight: bold;
+    font-style: italic;
+}
+
+footer ul li:first-child:hover {
+    color: var(--mainColor);
+}
+
+footer ul.first-list li:not(:first-child) {
+    font-size: large;
+    font-style: italic;
+    font-weight: lighter;
+}
+
+footer ul.first-list li i {
+    font-size: xx-large;
+}
+
+footer ul.first-list li form input[type="email"] {
+    width: 140px;
+    background-color: var(--mainColor);
+    border: none;
+    outline: none;
+    height: 40px;
+    /* font-size: 10px; */
+}
+
+footer ul.first-list li form input[type="email"]::placeholder {
+    color: #fff;
+    font-size: small;
+}
+
+footer ul.first-list li form input[type="email"]:focus {
+    border: none;
+    outline: none;
+}
+
+footer ul.first-list li form input[type="submit"] {
+    background-color: var(--secondColor);
+    border: solid 2px var(--mainColor);
+    outline: none;
+    padding: 5px 6px;
+    color: var(--mainColor);
+}
+
+/* end footer   */

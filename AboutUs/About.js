@@ -1,10 +1,15 @@
-const search = document.querySelector('.vectoricon');
-const inputicon = document.querySelector('.navitems input');
 
-search.addEventListener('click',function(){
-    if(inputicon.style.display==='none'){
-        inputicon.style.display='block';
-    } else{
-        inputicon.style.display='none'
+
+
+// NAV BAR
+window.onscroll( () =>{
+    let nav = document.querySelector("nav.navbar-expand-lg");
+    if (window.scrollY > 50) {
+      nav.classList.add("navbar-expand-lg-transparent-remove");
+    }else{
+      nav.classList.remove("navbar-expand-lg-transparent-remove");
+  
     }
-})
+});
+   
+  
