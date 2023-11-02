@@ -8,7 +8,9 @@
     font-family: pop;
     src: url(./Fonts/Poppins-Medium.ttf);
 }
-
+body{
+    background-color:#222222;
+}
 .main{
     width: 100%;
     height: 100vh;
@@ -24,7 +26,7 @@
 .head_1{
     font-size: 30px;
     font-weight: 600;
-    color: #333;
+    color: #ffffff;
 }
 .head_1 span{
     color: #FE7F32;

@@ -10,8 +10,18 @@ new Chart(ctx1, {
     labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
     datasets: [
       {
-        label: "# of Votes",
+        label: "red",
         data: [12, 19, 3, 5, 2, 3],
+        borderWidth: 1,
+      },
+      {
+        label: "blue",
+        data: [15, 1, 3, 9, 2, 3],
+        borderWidth: 1,
+      },
+      {
+        label: "blue",
+        data: [6, 9, 0, 2, 8, 19],
         borderWidth: 1,
       },
     ],
@@ -31,8 +41,13 @@ new Chart(ctx2, {
     labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
     datasets: [
       {
-        label: "# of Votes",
+        label: "red",
         data: [12, 19, 3, 5, 2, 3],
+        borderWidth: 1,
+      },
+      {
+        label: "blue",
+        data: [12, 19, 3, 5, 2, 8],
         borderWidth: 1,
       },
     ],
