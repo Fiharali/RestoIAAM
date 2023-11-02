@@ -144,6 +144,13 @@ header i:hover {
 .third-section .card:hover small {
   color: var(--secondColor);
 }
+
+.third-section .card:hover i {
+  background-color: var(--secondColor);
+}
+.third-section .card:hover p {
+  color: var(--secondColor);
+}
 .third-section .card .title {
   text-transform: uppercase;
   color: var(--textColor);
