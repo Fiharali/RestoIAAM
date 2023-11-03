@@ -637,3 +637,12 @@ h1:hover {
     opacity: 0;
   }
 }
+
+.first-section h1 {
+  color: var(--mainColor);
+  font-size: 100px;
+  position: absolute;
+  left: 60%;
+  top: 40%;
+  /* transform: translate(-50%, -50%); */
+}
