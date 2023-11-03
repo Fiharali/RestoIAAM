@@ -1,0 +1,169 @@
+
+/* the card section */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --mainColor: #fe7f32;
+  --secondColor: #222222;
+  --taxtColor: #eeeeee;
+}
+
+.container-fluid {
+  position: relative;
+  background-image: url('image/street_food.jpeg');
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.contact {
+  position: absolute;
+  top: 37%;
+  left: 44%;
+  color: var(--taxtColor)
+}
+
+.row {
+  display: flex;
+  justify-content: space-around;
+}
+
+.card {
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: -1rem;
+  position: relative;
+  background-color: var(--taxtColor);
+
+}
+
+.icon {
+  background-color: var(--taxtColor);
+  border: 1px;
+  border-radius: 50%;
+  padding: 27px;
+  box-shadow: 10px 10px 10px #f9d6c4;
+  position: relative;
+  bottom: 4rem;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-top: -50px;
+}
+
+.reservation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 4em;
+}
+
+#form-contact {
+  gap: 20%;
+}
+
+.msg-validation {
+  display: none;
+}
+
+.input-size {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-color: var(--mainColor);
+
+}
+
+/* start footer   */
+footer {
+  height: fit-content;
+  background-color: var(--secondColor);
+}
+
+footer ul {
+  list-style: none;
+  color: #fff;
+}
+
+footer ul li {
+  color: var(--textColor);
+  padding: 20px;
+  font-size: large;
+  font-style: italic;
+}
+
+footer ul:not(.first-list) li:not(:first-child) {
+  opacity: 0.6;
+}
+
+footer ul:not(.first-list) li:not(:first-child):hover {
+  text-decoration: underline;
+}
+
+footer ul li i {
+  color: wait
+}
+
+footer ul li:first-child {
+  font-size: xx-large;
+  font-weight: bold;
+  font-style: italic;
+}
+
+footer ul li:first-child:hover {
+  color: var(--mainColor);
+}
+
+footer ul.first-list li:not(:first-child) {
+  font-size: large;
+  font-style: italic;
+  font-weight: lighter;
+}
+
+footer ul.first-list li i {
+  font-size: xx-large;
+}
+
+footer ul.first-list li form input[type="email"] {
+  width: 140px;
+  background-color: var(--mainColor);
+  border: none;
+  outline: none;
+  height: 40px;
+  /* font-size: 10px; */
+}
+
+footer ul.first-list li form input[type="email"]::placeholder {
+  color: #fff;
+  font-size: small;
+}
+
+footer ul.first-list li form input[type="email"]:focus {
+  border: none;
+  outline: none;
+}
+
+footer ul.first-list li form input[type="submit"] {
+  background-color: var(--secondColor);
+  border: solid 2px var(--mainColor);
+  outline: none;
+  padding: 5px 6px;
+  color: var(--mainColor);
+}
+
+/* end footer   */
+h1:hover {
+  color: var(--mainColor);
+  opacity: 0.8;
+  transition: all 0.2s linear;
+}
