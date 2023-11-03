@@ -1,33 +1,150 @@
-
-/* the card section */
-body {
+* {
   margin: 0;
   padding: 0;
+  font-family: "Roboto Condensed", sans-serif;
+  color: var(--secondColor);
 }
 
+/* les color principe de page */
 :root {
   --mainColor: #fe7f32;
   --secondColor: #222222;
-  --taxtColor: #eeeeee;
+  --textColor: #eeeeee;
 }
 
-.container-fluid {
+body {
+  background-color: var(--textColor);
+}
+
+/* nav bar editing */
+.navbar-brand img {
+  width: 90px;
+}
+
+.container-fluid.first-section {
+  z-index: 793468;
+}
+
+.first-section {
+  background-color: #22222282;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+ul li .nav-link {
+  color: var(--textColor);
+  font-size: large;
   position: relative;
+}
+
+ul li .nav-link.hoverAfter::after {
+  content: " ";
+  position: absolute;
+  height: 2px;
+  width: 70%;
+  bottom: 10%;
+  left: 14%;
+  background-color: var(--mainColor);
+  transform: scaleX(0);
+  transition: all 0.2s linear;
+}
+
+ul li .nav-link.hoverAfter:hover::after {
+  transform: scaleX(1);
+}
+
+ul li .nav-link i {
+  color: var(--mainColor);
+  font-size: large;
+
+}
+
+ul li .nav-link i:hover {
+  transform: scale(1.2);
+  transition: all 0.2s linear;
+}
+
+ul li .nav-link:hover {
+  color: var(--mainColor);
+}
+
+ul li .nav-link.loginBtn {
+  background-color: var(--mainColor);
+  padding: 8px 30px;
+  border-radius: 10px;
+}
+
+ul li .nav-link.loginBtn:hover {
+  background-color: #ffffff00;
+
+}
+
+.fa-solid {
+  color: #FF6305;
+}
+
+.collapse {
+  display: flex;
+  justify-content: end;
+}
+
+@media (max-width: 990px) {
+  .collapse {
+    display: flex;
+    justify-content: start;
+  }
+}
+
+.navbar-expand-lg {
+  background-color: #0004ff00;
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  transition: all 0.4s linear;
+  left: 0;
+  top: 0;
+  right: 0;
+}
+
+.navbar-expand-lg-transparent-remove {
+  background-color: var(--textColor);
+}
+
+.navbar-expand-lg-transparent-remove ul li .nav-link {
+  color: var(--secondColor);
+}
+
+.navbar-expand-lg-transparent-remove ul li .nav-link:hover {
+  color: var(--mainColor);
+}
+
+/* end first section && navbar */
+
+
+/* the card section */
+
+
+.section-fluid {
   background-image: url('image/street_food.jpeg');
   height: 100vh;
   width: 100%;
   background-size: cover;
   background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .contact {
-  position: absolute;
-  top: 37%;
-  left: 44%;
-  color: var(--taxtColor)
+  color: white;
 }
 
-.row {
+.rowContact {
   display: flex;
   justify-content: space-around;
 }
