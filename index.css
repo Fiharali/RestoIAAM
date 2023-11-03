@@ -14,9 +14,6 @@ body {
   height: 500vh;
   background-color: var(--textColor);
 }
-.navbar-brand img {
-  width: 90px;
-}
 .first-section {
   background-image: url("images/backround.png");
   height: 100vh;
@@ -24,6 +21,10 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+.navbar-brand img {
+  width: 90px;
+}
+
 ul li .nav-link {
   color: var(--textColor);
   font-size: large;
@@ -198,7 +199,8 @@ h1.menuTitle {
   font-weight: bolder;
   font-size: large;
 }
-.third-section .row .col-lg-3 small {
+.third-section .row .col-lg-3 small a {
+  text-decoration: none;
   position: absolute;
   right: 0%;
   bottom: 0%;
@@ -207,6 +209,7 @@ h1.menuTitle {
   background-color: var(--mainColor);
   padding: 7px 16px;
   border-top-left-radius: 15px;
+  color: var(--secondColor);
 }
 /* end third section  */
 /* strat forth section  */
