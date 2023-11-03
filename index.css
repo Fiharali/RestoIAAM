@@ -14,9 +14,6 @@ body {
   height: 500vh;
   background-color: var(--textColor);
 }
-.navbar-brand img {
-  width: 90px;
-}
 .first-section {
   background-image: url("images/backround.png");
   height: 100vh;
@@ -24,6 +21,10 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+.navbar-brand img {
+  width: 90px;
+}
+
 ul li .nav-link {
   color: var(--textColor);
   font-size: large;
