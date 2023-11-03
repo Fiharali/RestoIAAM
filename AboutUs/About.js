@@ -29,31 +29,34 @@ for (let i = 0; i < click.length; i++) {
 
 
 
-  // window.addEventListener('scrol')
-  // let slideindex = 0;
-  // function showslide(){
-  //   let slides = document.querySelectorAll('.imagecards');
-
-  //   for(let i = 0; i < slides.length; i++){
-  //     slides[i].style.display="none"
-  //   }
-
-  //   slideindex++;
-
-  //   if(slideindex > slides.length){
-  //     slideindex=1;
-  //   }
-
-  //   slides[slideindex - 1].style.display="block"
-  //   setTimeout(showslide, 2000);
-  //  }
-  //  showslide();
+ 
 
 
+   
 
-
-
-
+  // if (window.scrollX  < 484){
+   
+  //   let slideindex = 0;
+  //   function showslide(){
+  //     let slides = document.querySelectorAll('.imagecards');
+  
+  //     for(let i = 0; i < slides.length; i++){
+  //       slides[i].style.display="none"
+  //     }
+  
+  //     slideindex++;
+  
+  //     if(slideindex > slides.length){
+  //       slideindex=1;
+  //     }
+  
+  //     slides[slideindex - 1].style.display="block"
+  //     setTimeout(showslide, 2000);
+  //    }
+     
+  // }
+  // showslide();
+  
 
 
 
