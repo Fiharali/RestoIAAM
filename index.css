@@ -3,6 +3,7 @@
   padding: 0;
   font-family: "Roboto Condensed", sans-serif;
   color: var(--secondColor);
+  z-index: 2;
 }
 :root {
   --mainColor: #fe7f32;
@@ -101,6 +102,9 @@ ul li .nav-link.loginBtn:hover {
 
 /* end first section  */
 /* start second section  */
+/* .second-section{
+  background: #000;
+} */
 
 .second-section i {
   font-size: 55px;
@@ -156,7 +160,6 @@ h1.menuTitle {
 .third-section .row .col-lg-3:hover {
   background-color: var(--mainColor);
   transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
-  border: solid 1px var(--secondColor);
 }
 .third-section .row .col-lg-3:hover img {
   animation: rotate 2s 1 cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -555,4 +558,83 @@ h1:hover {
   color: var(--mainColor);
   opacity: 0.8;
   transition: all 0.2s linear;
+}
+
+/* spiner load  */
+
+.spiner {
+  background-color: var(--secondColor);
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  z-index: 5000;
+  text-align: center;
+}
+.spiner img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* smoke animation  */
+
+.smoke {
+  position: fixed;
+  top: 20%;
+  z-index: 1;
+  /* right: 0; */
+  animation: smokeAnimation 2s linear infinite;
+  /* filter: brightness(10); */
+}
+.smoke2 {
+  left: 10%;
+  top: 45%;
+  animation-delay: 100ms;
+}
+.smoke3 {
+  left: 15%;
+  animation-delay: 800ms;
+}
+.smoke4 {
+  left: 20%;
+  animation-delay: 1000ms;
+}
+
+.smoke5 {
+  left: 25%;
+  top: 40%;
+
+  animation-delay: 500ms;
+}
+.smoke6 {
+  left: 30%;
+  animation-delay: 750ms;
+}
+@keyframes smokeAnimation {
+  0% {
+    transform: translateY(0px) scale(-1, 1);
+    opacity: 0;
+  }
+
+  25% {
+    transform: translateY(-10px) scale(-1, 1.05);
+    opacity: 0.5;
+  }
+
+  50% {
+    transform: translateY(-20px) scale(-1, 1.1);
+    opacity: 1;
+  }
+
+  75% {
+    transform: translateY(-30px) scale(-1, 1.15);
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: translateY(-40px) scale(-1, 1.2);
+    opacity: 0;
+  }
 }

@@ -4,7 +4,7 @@
     font-family: "Roboto Condensed", sans-serif;
     color: var(--secondColor);
 }
-
+/* les color principe de page */
 :root {
     --mainColor: #fe7f32;
     --secondColor: #222222;
@@ -15,6 +15,7 @@ body {
     background-color: var(--textColor);
 }
 
+/* nav bar editing */
 .navbar-brand img {
     width: 90px;
 }
@@ -55,8 +56,9 @@ ul li .nav-link.hoverAfter:hover::after {
 }
 
 ul li .nav-link i {
-    color: var(--mainColor);
+    color:var(--mainColor);
     font-size: large;
+    
 }
 
 ul li .nav-link i:hover {
@@ -76,7 +78,10 @@ ul li .nav-link.loginBtn {
 
 ul li .nav-link.loginBtn:hover {
     background-color: #ffffff00;
-    /* padding: 8px 14px; */
+    
+}
+.fa-solid{
+    color: #FF6305;
 }
 
 .collapse {
@@ -114,8 +119,9 @@ ul li .nav-link.loginBtn:hover {
     color: var(--mainColor);
 }
 
-/* end first section  */
+/* end first section && navbar */
 
+/* the first image next to the navbar */
 .image-container {
     position: relative;
 }
@@ -134,16 +140,7 @@ ul li .nav-link.loginBtn:hover {
     right: 50%;
 }
 
-.About-button button {
-    position: absolute;
-    top: 46%;
-    right: 50%;
-    width: 169px;
-    height: 59px;
-    border-radius: 9px;
-    background: #FE7F32;
-    color: white;
-}
+/* We invite you to our restaurant */
 
 .firstsection-about {
     margin-top: 50px;
@@ -157,12 +154,21 @@ ul li .nav-link.loginBtn:hover {
     width: 80%;
     height: 90vh;
 }
-
+/* first cards in about */
 .WhatWe-Do {
     justify-content: center;
     align-items: center;
     text-align: center;
     margin-top: 50px;
+}
+
+.cards-about .card:hover{
+    transform: scale(1.1);
+    transition: 1s;
+}
+.card img:hover{
+    transform: rotate(360deg);
+    transition:transform 1.5s;
 }
 
 .WhatWe-Do .cards-about {
@@ -182,18 +188,13 @@ ul li .nav-link.loginBtn:hover {
     height: 74px;
     margin-top: 30px;
 }
-
+/* Our team cards : informations and members of the team */
 .meetourtteam-about {
     margin-top: 70px;
     align-items: center;
     justify-content: center;
     text-align: center;
     margin-top: 140px;
-}
-
-.card img:hover{
-    transform: rotate(360deg);
-    transition:transform 1s;
 }
 
 .imagecards {
@@ -281,16 +282,7 @@ ul li .nav-link.loginBtn:hover {
     height: 25px;
 }
 
-
-
-
-
-
-
-
-
-
-
+/* the end of our team images */
 
 /* start footer   */
 footer {
@@ -372,10 +364,6 @@ footer ul.first-list li form input[type="submit"] {
 
 /* end footer   */
 
-
-
-
-
 /* responsive */
 
 @media(max-width : 990px){
@@ -399,6 +387,13 @@ footer ul.first-list li form input[type="submit"] {
     .firstsection-about video{
         height: 70vh;
     }
+    .navbar-toggler-icon{
+        background-color: #ffffff70;
+       
+    }
+    button.navbar-toggler{
+    background-color: #fe7f32;
+   }
 }
 @media(max-width : 485px){
 
@@ -412,8 +407,61 @@ footer ul.first-list li form input[type="submit"] {
     .ourteam-about{
         display: grid;
         grid-template-columns: 1fr;
+        overflow: hidden;
+        justify-content: space-around;
     }
-
-
-
+    .ourteam-about .imagecards{
+        min-width: 50%
+    }
+    .banner-text h1{
+        top: 55%;
+        right: 41%;
+    }
+    .image-container img{
+        object-fit: unset;
+        height: 42vh;
+    }
 }
+
+/* text animation */
+.focus-in-contract-bck {
+	-webkit-animation: focus-in-contract-bck 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: focus-in-contract-bck 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+ @-webkit-keyframes focus-in-contract-bck {
+    0% {
+      letter-spacing: 1em;
+      -webkit-transform: translateZ(300px);
+              transform: translateZ(300px);
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateZ(12px);
+              transform: translateZ(12px);
+      -webkit-filter: blur(0);
+              filter: blur(0);
+      opacity: 1;
+    }
+  }
+  @keyframes focus-in-contract-bck {
+    0% {
+      letter-spacing: 1em;
+      -webkit-transform: translateZ(300px);
+              transform: translateZ(300px);
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateZ(12px);
+              transform: translateZ(12px);
+      -webkit-filter: blur(0);
+              filter: blur(0);
+      opacity: 1;
+    }
+  }
+  
+  
+ 

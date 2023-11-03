@@ -94,6 +94,11 @@ header i:hover {
   color: var(--secondColor);
   border: none;
   border-radius: 9px;
+  transition: all 0.2s linear;
+}
+
+.second-section .row div button:first-child:hover {
+  background-color: var(--textColor);
 }
 .second-section .row div button:first-child i {
   padding: 0 20px;
@@ -107,6 +112,10 @@ header i:hover {
   padding-block: 9px;
   border: none;
   border-radius: 9px;
+  transition: all 0.2s linear;
+}
+.second-section .row div button:last-child:hover {
+  background-color: var(--mainColor);
 }
 .second-section .row div button:last-child i {
   /* padding: 10px; */
@@ -127,8 +136,21 @@ header i:hover {
   min-width: 300px;
   max-width: 300px;
   margin-left: 15px;
+  transition: all 0.2s linear;
+}
+.third-section .card:hover {
+  background-color: var(--mainColor);
+}
+.third-section .card:hover small {
+  color: var(--secondColor);
 }
 
+.third-section .card:hover i {
+  background-color: var(--secondColor);
+}
+.third-section .card:hover p {
+  color: var(--secondColor);
+}
 .third-section .card .title {
   text-transform: uppercase;
   color: var(--textColor);
