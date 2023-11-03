@@ -9,6 +9,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!---boxicons link-->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    
 </head>
 
 <body>
@@ -21,16 +24,26 @@
           <h2 class="title">Sign in</h2>
           <div class="input-field">
             <i class="fas fa-user" style="color: #ff822e"></i>
-            <input type="text" placeholder="Username" />
-            <span class="msg-validation-signin">write a vailde Username</span>
+            <input type="text" placeholder="Username"  id="contact-username" oninput="ValidateUsername()" />
+            <span class="name-err"></span>
           </div>
           <div class="input-field">
             <i class="fas fa-lock" style="color: #ff822e"></i>
-            <input type="password" placeholder="Password"/>
-            <span class="msg-validation-signin">write a vailde Password</span>
+            <input type="password" placeholder="Password" id="contact-pass" oninput="ValidatePass()"/>
+            <span class="password-err"></span>
 
           </div>
-          <input type="submit" value="Login" class="btn solid" />
+
+
+
+
+
+          <input type="submit" value="Login" class="btn solid" id="btnLogin"/>
+
+
+
+
+
           <p class="social-text">Or Sign in with social platforms</p>
           <div class="social-media">
             <a href="#" class="social-icon">
@@ -53,22 +66,32 @@
           <h2 class="title">Sign up</h2>
           <div class="input-field">
             <i class="fas fa-user" style="color: #ff822e"></i>
-            <input type="text" placeholder="Username" />
-            <span class="msg-validation-signin">write a vailde Username</span>
+            <input type="text" placeholder="Username" id="contact-name" oninput="ValidateName()"/>
+            <span class="user-erreur"></span>
           </div>
 
           <div class="input-field">
             <i class="fas fa-envelope" style="color: #ff822e"></i>
-            <input type="email" placeholder="Email" />
-            <span class="msg-validation-signin">write a vailde Email</span>
+            <input type="email" placeholder="Email" id="contact-email" oninput="ValidateEmail()"/>
+            <span class="email-erreur"></span>
 
           </div>
 
           <div class="input-field">
             <i class="fas fa-lock" style="color: #ff822e"></i>
-            <input type="password" placeholder="Password" />
-            <span class="msg-validation-signin">write a vailde Username</span>
+            <input type="password" placeholder="Password" id="contact-password" oninput="ValidatePassword()"/>
+            <span class="passWord-erreur"></span>
           </div>
+
+
+
+
+
+
+
+
+
+
 
           <input type="submit" class="btn" value="Sign up" />
 

@@ -8,6 +8,10 @@
   input {
     font-family: "Poppins", sans-serif;
   }
+
+  .input-field span{
+    color: red;
+  }
   
   .container {
     position: relative;
