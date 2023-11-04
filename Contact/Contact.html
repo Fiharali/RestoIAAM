@@ -58,12 +58,13 @@
             <h1 class="contact color">Contact Us</h1>
         </div>
     </section>
-    <section>
+    <section class="cardes">
+
         <div class="pt-5 pb-5">
             <div class="container">
-                <div class="row justify-content-around">
+                <div class="row justify-content-evenly justify-content-center align-items-center">
 
-                    <div class="card" style="width: 20rem;">
+                    <div class="card" style="width: 20rem; background: #eeeeee;">
                         <!-- Location -->
                         <div class="icon">
                             <i class="fa-solid fa-map-location fa-4x" style="color: #ff822e;"></i>
@@ -76,7 +77,7 @@
 
                     </div>
 
-                    <div class="card" style="width: 20rem;">
+                    <div class="card" style="width: 20rem;  background: #eeeeee;">
                         <!-- Phone Number -->
                         <div class="icon">
                             <i class="fa-solid fa-phone fa-4x" style="color: #ff822e;"></i>
@@ -89,7 +90,7 @@
                     </div>
 
 
-                    <div class="card" style="width: 20rem;">
+                    <div class="card" style="width: 20rem;  background: #eeeeee;">
                         <!-- Email & Adress -->
                         <div class="icon">
                             <i class="fa-solid fa-envelope fa-4x" style="color: #ff822e;"></i>
@@ -102,7 +103,7 @@
                     </div>
 
 
-                    <div class="card" style="width: 20rem;">
+                    <div class="card" style="width: 20rem;  background: #eeeeee;">
                         <!-- open & closing -->
                         <div class="icon">
                             <i class="fa-regular fa-clock fa-4x" style="color: #ff822e;"></i>
@@ -117,66 +118,66 @@
             </div>
         </div>
     </section>
-    <section>
+    
         <div class="reservation" style="margin-top: 7%;">
             <h2 style="margin-bottom: 10%; font-size: xx-large;">Reservation</h2>
-            <form class="container">
-                <div id="form-contact" class="row d-flex justify-content-center align-items-center gap-lg-5"
-                    style="margin-left: 7%;">
+            <form id="formContact" class="container justify-content-evenly justify-content-center align-items-center">
+                <div class="row justify-content-evenly justify-content-center align-items-center">
 
-                    <div class="row justify-content-evenly gap-0">
+                    <div class="row justify-content-evenly  mt-4">
                         <div class="col-6 d-flex flex-column gap-0">
-                            <label>Your Name</label>
-                            <input type="text" id="input-Name " placeholder="Your Name" class="input-size"
-                                style="height: 46px;width: 72%;">
-                            <span id="msg-Nam" class="msg-validation"> ecrire un valide Nom</span>
+                            <label for="input-Name">Your Name</label>
+                            <input type="text" id="input-Name " placeholder="Your Name" class="input-size" >
+                            <span id="msg-valid-Nam" class="msg-validation"> ecrire un valide Nom</span>
                         </div>
 
-                        <div class="col-6 d-flex flex-column gap-0">
-                            <label>Email</label>
-                            <input type="email" id="input-Email" placeholder="Email" class="input-size"
-                                style="height: 46px;width: 72%;">
+                        <div class="col-6 d-flex flex-column mt-1">
+                            <label for="input-Email">Email</label>
+                            <input type="email" id="input-Email" placeholder="Email" class="input-size">
                             <span id="msg-valid-Email" class="msg-validation">ecrire un valide Email</span>
                         </div>
                     </div>
 
-                    <div class="row justify-content-evenly">
+                    <div class="row justify-content-evenly  mt-4">
 
-                        <div class="col-6 d-flex flex-column gap-0">
-                            <label>phone Number</label>
-                            <input type="tel" id="input-phoneNumber" placeholder="(+211)65432987" class="input-size"
-                                style="height: 46px;width: 72%;">
-                            <span id="msg-phoneNumber" class="msg-validation">ecrire un valide Number</span>
+                        <div class="col-6 d-flex flex-column mt-1">
+                            <label for="input-phoneNumber">phone Number</label>
+                            <input type="tel" id="input-phoneNumber" placeholder="(+211)65432987" class="input-size">
+                            <span id="msg-valid-phoneNumber" class="msg-validation">ecrire un valide Number</span>
                         </div>
-                        <div class="col-6 d-flex flex-column gap-0">
-                            <label>Members</label>
-                            <input type="text" id="input-Nembers" placeholder="Members" class="input-size"
-                                style="height: 46px;width: 72%;">
-                            <span id="msg-Nam" class="msg-validation"> ecrire un valide Nom</span>
+                        <div class="col-6 d-flex flex-column mt-1">
+                            <label for="input-Members">Members</label>
+                            <input type="text" id="input-Nembers" placeholder="Members" class="input-size">
+                            <span id="msg-valid-Members" class="msg-validation"> ecrire un valide Membres </span>
                         </div>
+
                     </div>
 
-                    <div class="row justify-content-evenly">
-                        <div class="col-6 d-flex flex-column gap-0">
-                            <label>Message</label>
-                            <input type="tel" id="input-Message" class="input-size" style="height: 46px;width: 72%;">
-                            <span id="msg-phoneNumber" class="msg-validation">ecrire un valide Number</span>
+                    <div class="row justify-content-evenly mt-4 ">
+                        <div class="col-6 d-flex flex-column mt-1">
+                            <label for="input-Message">Message</label>
+                            <textarea id="input-Message" class="input-size input-message" cols="30" placeholder="message"
+                                rows="10"></textarea>
+                            <span id="msg-valid-Message" class="msg-validation"> ecrire un valide text </span>
                         </div>
 
-                        <div class="col-6 d-flex flex-column gap-0">
-                            <div class="captcha d-flex align-items-center" style="border: 1px solid black;">
-                                <input type="checkbox" id="inputCheckbox">
+                        <div id="captcha" class="col-6 d-flex flex-column mt-1">
+                            <div class="captcha d-flex align-items-center bg-light"
+                                style="border: 1px solid black;height: 4rem;width:50%; ">
+                                <input type="checkbox" id="inputCheckbox" class="" style="height: 1rem;width: 1rem;">
                                 <p>je ne suis pas un robot</p>
-                                <img src="image/captchlogo.jpg" alt="captchlogo" style="height: 2%;width: 2%;">
                             </div>
                         </div>
                     </div>
+                    <button type="submit" class="btn btn-lg" style="background-color: #ff822e; margin-top: 8%;">book a
+                        table</button>
                 </div>
+            
+                
             </form>
-            <button type="button" class="btn btn-lg" style="background-color: #ff822e; margin-top: 8%;">book a
-                table</button>
+
         </div>
-    </section>
+    
 
     <!-- start footer  section  -->
     <footer class="container-fluid2 ">
@@ -195,10 +196,7 @@
                                 style="color: #ff822e"></i> &nbsp; &nbsp;
                             example@gmail.com</li>
                         <li>
-                            <form action="">
-                                <input type="email" placeholder="Enter Your Email">
-                                <input type="submit" value="Send">
-                            </form>
+                          
                         </li>
                     </ul>
                 </div>

@@ -144,35 +144,33 @@ ul li .nav-link.loginBtn:hover {
   color: white;
 }
 
-.rowContact {
-  display: flex;
-  justify-content: space-around;
-}
+
 
 .card {
-  height: 40vh;
+  height: 38vh;
+  width: 20rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: -1rem;
   position: relative;
-  background-color: var(--taxtColor);
+  background: #eeeeee;
 
 }
 
 .icon {
-  background-color: var(--taxtColor);
+  background-color: #eeeeee;
   border: 1px;
   border-radius: 50%;
   padding: 27px;
   box-shadow: 10px 10px 10px #f9d6c4;
   position: relative;
-  bottom: 4rem;
+  bottom: 3rem;
 }
 
 .card-body {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   gap: 2rem;
   margin-top: -50px;
@@ -189,7 +187,23 @@ ul li .nav-link.loginBtn:hover {
   gap: 20%;
 }
 
-.msg-validation {
+#msg-valid-Nam {
+  display: none;
+}
+
+#msg-valid-Email {
+  display: none;
+}
+
+#msg-valid-phoneNumber {
+  display: none;
+}
+
+#msg-valid-Members {
+  display: none;
+}
+
+#msg-valid-Message {
   display: none;
 }
 
@@ -198,6 +212,16 @@ ul li .nav-link.loginBtn:hover {
   border-left: none;
   border-right: none;
   border-color: var(--mainColor);
+  height: 46px;
+  width: 72%;
+
+}
+
+.input-size:focus {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  outline: none;
 
 }
 
@@ -283,4 +307,30 @@ h1:hover {
   color: var(--mainColor);
   opacity: 0.8;
   transition: all 0.2s linear;
+}
+
+@media(max-width: 990px) {
+  .row {
+    margin-left: 40em;
+    gap: 24px;
+    flex-direction: column;
+  }
+
+  header {
+    width: 90%;
+  }
+
+  .input-size {
+
+    width: 15em;
+  }
+
+  .container {
+    margin-left: 10rem;
+  }
+
+  .captcha {
+    width: 100rem;
+  }
+
 }
